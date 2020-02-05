@@ -21,7 +21,7 @@ namespace BlobRead
             // Connect to the blob container
             CloudBlobContainer container = serviceClient.GetContainerReference($"device1");
 
-            ReadBlobHierarchical(container,DateTime.Now.ToString("yyyy/MM/dd"));
+            ReadBlobHierarchical(container,DateTime.Now.ToString("yyyy/MM/dd")).Wait();
 
             Console.ReadLine();
         }

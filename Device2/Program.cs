@@ -10,7 +10,7 @@ namespace Device2
     class Program
     {
         private static DeviceClient deviceClient;
-        private readonly static string connectionString = "IOTHUB_DEVICE_CONNECTIONSTRING";
+        private readonly static string connectionString = "IOTHUB_DEVICE__CONNECTIONSTRING";
 
         static void Main(string[] args)
         {
