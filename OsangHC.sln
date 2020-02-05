@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsangHC", "OsangHC\OsangHC.csproj", "{0DA9097E-389B-4438-84C6-34AE9A264A2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device1", "Device1\Device1.csproj", "{2F084BC8-9571-4C21-96B8-E7E58EC72526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device1", "Device1\Device1.csproj", "{2F084BC8-9571-4C21-96B8-E7E58EC72526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device2", "Device2\Device2.csproj", "{171C449C-2539-45BB-90D0-F573DD7910C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device2", "Device2\Device2.csproj", "{171C449C-2539-45BB-90D0-F573DD7910C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device3", "Device3\Device3.csproj", "{E9EB367E-0A95-4932-989C-91678631880E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Device3", "Device3\Device3.csproj", "{E9EB367E-0A95-4932-989C-91678631880E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobRead", "BlobRead\BlobRead.csproj", "{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DA9097E-389B-4438-84C6-34AE9A264A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DA9097E-389B-4438-84C6-34AE9A264A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DA9097E-389B-4438-84C6-34AE9A264A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DA9097E-389B-4438-84C6-34AE9A264A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F084BC8-9571-4C21-96B8-E7E58EC72526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F084BC8-9571-4C21-96B8-E7E58EC72526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F084BC8-9571-4C21-96B8-E7E58EC72526}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{E9EB367E-0A95-4932-989C-91678631880E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EB367E-0A95-4932-989C-91678631880E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EB367E-0A95-4932-989C-91678631880E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
