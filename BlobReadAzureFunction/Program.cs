@@ -4,8 +4,7 @@ using Newtonsoft.Json;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Device1
+namespace BlobReadAzureFunction
 {
     class Program
     {
@@ -15,66 +14,34 @@ namespace Device1
         static void Main(string[] args)
         {
             deviceClient = DeviceClient.CreateFromConnectionString(connectionString, TransportType.Mqtt);
-
-            d2cMsgAsync();
+            
             c2dMsgAsync();
+            d2cMsgAsync();
 
             Console.ReadLine();
         }
 
         private static async void d2cMsgAsync()
         {
-            double minTemperature = 20;
-            Random rand = new Random();
-
             while (true)
             {
-                double currentTemperature = minTemperature + rand.NextDouble() * 15;
+                Console.WriteLine("give me the Device Name which device you want to read");
 
-                String commandType = "telemetry";
-                string typeString = "BGM";
-                string toString = "HUB";
-                string unitString = "mgdl";
-
-                int valueInt = 100;
-                int value1Int = 100;
-                int value2Int = 100;
-                int value3Int = 100;
-                int value4Int = 100;
-                int value5Int = 100;
-                int value6Int = 100;
+                string getDeviceName = Console.ReadLine();
 
                 // Create JSON message
                 var telemetryDataPoint = new
                 {
-                    CommandType = commandType,
-                    Type = typeString,
-                    To = toString,
-                    Value = valueInt,
-                    Unit = unitString,
-                    Time = DateTime.Now.ToString("yyyyMMddhhmm"),
-                    Value1 = value1Int,
-                    Value2 = value2Int,
-                    Value3 = value3Int,
-                    Value4 = value4Int,
-                    Value5 = value5Int,
-                    Value6 = value6Int,
-                    DeviceName = "device1",
-                    temperature = currentTemperature
+                    CommandType = "readblob",
+                    DeviceName = getDeviceName,
                 };
                 var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
-
-                // Add a custom application property to the message.
-                // An IoT hub can filter on these properties without access to the message body.
-
-                message.Properties.Add("temperatureAlert", (currentTemperature > 30) ? "true" : "false");
 
                 // Send the telemetry message
                 await deviceClient.SendEventAsync(message);
                 Console.WriteLine("{0} > DEVICE1 Sending message: {1}", DateTime.Now.ToString("yyyyMMddhhmm"), messageString);
 
-                await Task.Delay(3000);
             }
         }
 
@@ -87,7 +54,7 @@ namespace Device1
                 if (receivedMessage == null) continue;
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Received message, DEVICE1: {0}",
+                Console.WriteLine("Received message: {0}",
                 Encoding.ASCII.GetString(receivedMessage.GetBytes()));
                 Console.ResetColor();
 

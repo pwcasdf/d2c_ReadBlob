@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device2", "Device2\Device2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device3", "Device3\Device3.csproj", "{E9EB367E-0A95-4932-989C-91678631880E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobRead", "BlobRead\BlobRead.csproj", "{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobRead", "BlobRead\BlobRead.csproj", "{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobReadAzureFunction", "BlobReadAzureFunction\BlobReadAzureFunction.csproj", "{865E1528-1E12-42E3-9150-474E82E5881D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCC7404D-0A3E-4F0D-B75D-39177A5E65F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865E1528-1E12-42E3-9150-474E82E5881D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865E1528-1E12-42E3-9150-474E82E5881D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865E1528-1E12-42E3-9150-474E82E5881D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865E1528-1E12-42E3-9150-474E82E5881D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

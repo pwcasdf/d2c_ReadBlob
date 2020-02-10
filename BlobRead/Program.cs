@@ -3,15 +3,13 @@ using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-
-
 namespace BlobRead
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string connectionString = "STORAGEACCOUNT_CONNECTIONSTRING";
+            string connectionString = "Storage_Account_Connection_String";
 
             // Setup the connection to the storage account
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);

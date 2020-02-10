@@ -10,7 +10,7 @@ namespace Device2
     class Program
     {
         private static DeviceClient deviceClient;
-        private readonly static string connectionString = "IOTHUB_DEVICE__CONNECTIONSTRING";
+        private readonly static string connectionString = "Device_Connection_String";
 
         static void Main(string[] args)
         {
@@ -31,6 +31,7 @@ namespace Device2
             {
                 double currentTemperature = minTemperature + rand.NextDouble() * 15;
 
+                String commandType = "telemetry";
                 string typeString = "BGM";
                 string toString = "HUB";
                 string unitString = "mgdl";
@@ -46,6 +47,7 @@ namespace Device2
                 // Create JSON message
                 var telemetryDataPoint = new
                 {
+                    CommandType = commandType,
                     Type = typeString,
                     To = toString,
                     Value = valueInt,
